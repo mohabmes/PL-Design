@@ -1,0 +1,64 @@
+
+"Start Symbol"=<program>
+
+Identifier={Letter}{AlphaNumeric}*
+Num={Digit}+
+Float={Digit}*'.'{Digit}+
+
+ !==========[start Program]=====================
+<program> ::= 'main' '{' <stmt-list> '}'
+<stmt-list> ::=  <stmt>|<stmt><stmt-list>
+<stmt>::=<assign>';'
+       | <if-stmt>
+       | <for-stmt>
+       | <While-stmt>
+       | <inc>';'
+       | <types><assign>';'
+       | <fstmt>
+       | <class>
+ !========[assign statement]===============         
+<assign> ::= Identifier'='<expr>
+<expr> ::= <term>'+'<expr>
+         | <term>'-'<expr>
+         | <term>         
+<term>::= <factor>'*'<term>
+        | <factor>'/'<term>
+        | <factor>'%'<term>
+        | <factor>
+<factor> ::= '('<expr>')'
+           | Identifier
+           | Num
+           | Float   
+!===========[if statement]==================================      
+<if-stmt>::= if'('<logic-expr>')''{' <stmt-list>'}'
+          |  if'('<logic-expr>')''{' <stmt-list>'}'else'{'<stmt-list> '}'        
+<logic-expr> ::= <expr> <op> <expr>
+<op> ::= '<'|'>'|'<='|'>='|'=='|'!='
+
+!===========[for & While loop statement]=====================
+<for-stmt> ::= for'('<types><assign>';'<logic-expr>';'<inc>')''{' <stmt-list>'}'
+
+<While-stmt>::= while'('<logic-expr>')'do'{'<stmt-list>'}'
+!==================[Function Declaration]=================
+<fstmt> ::=  function<return>Identifier'('<init-list>')''{'<fstmt-list>'}'
+<return> ::= <types> | void
+<init-list> ::= <types>Identifier','<init-list>|<types>Identifier
+<fstmt-list> ::=  <func-stmt>|<func-stmt><fstmt-list>
+<func-stmt> ::= <assign>';'
+       | <if-stmt>
+       | <for-stmt>
+       | <While-stmt>
+       | <inc>';'
+       | <types><assign>';'
+
+    
+!================[Class Declaration]======================
+<class> ::= Class Identifier '{'<c-list>'}'
+<c-list> ::= <c-elemet><c-list>|<c-method> <c-list>|<c-elemet>|<c-method>                  
+<c-elemet> ::= <c-type><types><assign>';'
+<c-method> ::= <c-type><fstmt> 
+<c-type> ::= Public | Private | Protected | static
+<types> ::= int | real | string | char
+
+<inc> ::=  Identifier '++'
+         | Identifier '--'
