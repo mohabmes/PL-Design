@@ -1,0 +1,20 @@
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\bin\Debug\PLD.exe.config
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\bin\Debug\PLD.exe
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\bin\Debug\PLD.pdb
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\bin\Debug\CalithaLib.dll
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\bin\Debug\GoldParserEngine.dll
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.csprojResolveAssemblyReference.cache
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.Form1.resources
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.Properties.Resources.resources
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.csproj.GenerateResource.Cache
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.exe
+c:\users\mmes\documents\visual studio 2013\Projects\PLD\PLD\obj\Debug\PLD.pdb
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\bin\Debug\PLD.exe.config
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.exe
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.pdb
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\bin\Debug\PLD.exe
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\bin\Debug\PLD.pdb
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.csprojResolveAssemblyReference.cache
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.Form1.resources
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.Properties.Resources.resources
+C:\Users\MMES\Documents\Visual Studio 2013\Projects\PLD V2\PLD\obj\Debug\PLD.csproj.GenerateResource.Cache

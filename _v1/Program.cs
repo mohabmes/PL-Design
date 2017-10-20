@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PLD
+namespace PLD_Project
 {
     static class Program
     {

@@ -1,0 +1,70 @@
+"Start Symbol"=<program>
+
+!  ------------------------------
+<program> ::= Start <stmt-list> End
+           
+Identifier={Letter}{AlphaNumeric}*
+Num={Digit}+
+Float={Digit}*'.'{Digit}+
+     
+<op> ::= '<'|'>'|'<='|'>='|'=='|'!='
+      
+<types> ::= int | real | string | char
+
+<inc> ::=  Identifier '++'
+         | Identifier '--'
+
+<stmt>::=<assign>';'
+       | <if-stmt> '::'
+       | <for-stmt> '::'
+       | <inc>';'
+       | <types><assign>';'
+       | <fstmt> '::'
+       | <fcall> ';'
+       | <class> '::'
+
+<stmt-list> ::=  <stmt> | <stmt> <stmt-list>
+
+<assign> ::= Identifier '=' <expr>
+<expr> ::= <term> '+' <expr>
+         | <term> '-' <expr>
+         | <term>         
+<term>::= <factor> '*' <term>
+        | <factor> '/' <term>
+        | <factor> '%' <term>
+        | <factor>        
+<factor> ::= '(' <expr> ')'
+           | Identifier
+           | Num
+           | Float
+
+! control 
+<logic-expr> ::= <expr> <op> <expr>
+<if-stmt>::= if <logic-expr> ':' <stmt-list>
+          |  if <logic-expr> ':' <stmt-list> else <stmt-list>          
+
+
+
+! Loop 
+<for-stmt> ::= from <types><assign> to  <logic-expr> ':' <stmt-list>
+
+! Function 
+<fstmt> ::= function <return> Identifier '('<init-list>')'':' <fstmt-list>
+<return> ::= <types> | void
+<init-list> ::= <types> Identifier ',' <init-list>|<types> Identifier
+<fstmt-list> ::=  <func-stmt>|<func-stmt> <fstmt-list>
+<func-stmt> ::= <assign>';'
+              | <if-stmt> '::'
+              | <for-stmt> '::'
+              | <inc>';'
+              | <types><assign>';'
+
+<fcall> ::= Identifier '('<args>')'
+<args> ::=  <factor>',' <args> | <factor>
+        
+! Class 
+<class> ::= Class Identifier ':' <c-list>              
+<c-list> ::= <c-elemet> <c-list> | <c-method> <c-list> | <c-elemet> | <c-method>                  
+<c-elemet> ::= <c-type> <types><assign>';'                
+<c-method> ::= <c-type> <fstmt> '::'                       
+<c-type> ::= Public | Private | Protected | static
